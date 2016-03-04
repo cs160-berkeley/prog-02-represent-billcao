@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/libs/internal_impl-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e239441500605809818997dd63b62a947195f8c">
+        <dex dex="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/pre-dexed/debug/internal_impl-23.2.0_090ff5f420843e2ab2f86efdfb11ea03f6dfa84e.jar" />
+    </item>
+    <item
+        jar="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.1.0_1f8c398bad3b7863db8610eb1ff514eb2bf6abc2.jar" />
+    </item>
+    <item
+        jar="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="97f3b099801a9ad9d70e835b9125273e986eb68d">
+        <dex dex="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wearable-8.1.0_2a80aeb671b0074aff6dbf353c96af267c40498f.jar" />
+    </item>
+    <item
+        jar="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_e3b401362ae07974714c45d682d16a6c069fcb44.jar" />
+    </item>
+    <item
+        jar="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
+        <dex dex="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.0_2651518d385cd1580b8a5b6b0d082f66d4a3ad89.jar" />
+    </item>
+    <item
+        jar="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/exploded-aar/com.android.support/design/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
+        <dex dex="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.0_61d802ac192f2bad874614dd015ae3929c8dad35.jar" />
+    </item>
+    <item
+        jar="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
+        <dex dex="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.0_5c482d8ab71856cf1ec925929e1331257f0fa18c.jar" />
+    </item>
+    <item
+        jar="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
+        <dex dex="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.0_b580916c88ab3346bbaf164aa880fb94bce691ae.jar" />
+    </item>
+    <item
+        jar="/Users/billcao/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.0/support-annotations-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
+        <dex dex="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/pre-dexed/debug/support-annotations-23.2.0_f2383ef37a18bd463027a06b74e213fac54efd69.jar" />
+    </item>
+    <item
+        jar="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
+        <dex dex="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-8.1.0_c22a1a9ab43a389b23f88784bfc1a2761a0f6459.jar" />
+    </item>
+    <item
+        jar="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/exploded-aar/com.google.android.support/wearable/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="58b928ccbaf9090c632f278d6bd31e1ae42f2457">
+        <dex dex="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/pre-dexed/debug/com.google.android.support-wearable-1.3.0_217ed087f39f6ed333bc400474652f5970a90e56.jar" />
+    </item>
+    <item
+        jar="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="292a9fa091757208efa65e77eef63088247e51f3">
+        <dex dex="/Users/billcao/Desktop/_CS160/Projects/IChooseWho/wear/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.0_e2cbb22b8cf6da8a0938f49608fa4c0ce466eb4a.jar" />
+    </item>
+
+</items>
