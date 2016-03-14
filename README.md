@@ -8,6 +8,9 @@ Bill Cao ([billcao@berkeley.edu](mailto:billcao@berkeley.edu))
 
 ## Demo Video
 
-See [IChooseWho] (https://www.youtube.com/watch?v=y8rlI2JbcAc)
+See [IChooseWho] (https://youtu.be/JsrsZItJMRc)
 
 ## Screenshots
+![User Flow](/screenshots/flow1.png)
+![User Flow](/screenshots/flow2.png)
+![User Flow](/screenshots/flow3.png)
