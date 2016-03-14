@@ -5,90 +5,93 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     card_view:cardCornerRadius="5dp"
     card_view:cardUseCompatPadding="true" >
 
     <RelativeLayout
-        android:layout_width="100dp"
-        android:layout_height="110dp"
-        android:paddingTop="5dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:paddingTop="5dp">
             <ImageView
                 android:id="@+id/rep_image"
+                android:paddingLeft="18dp"
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:src="@drawable/barbara_boxer"/>
-    </RelativeLayout>
+                android:layout_height="100dp" />
+        </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:paddingLeft="110dp"
-        android:paddingTop="5dp"
-        android:background="?android:selectableItemBackground"  >
-
-        <TextView
-            android:id="@+id/name_text"
-            android:text="Dummy Name"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/party_text"
-            android:text="Dummy Party"
-            android:layout_below="@id/name_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-            android:textSize="10sp" />
-
-        <TextView
-            android:id="@+id/type_text"
-            android:text="Dummy Type"
-            android:layout_below="@id/party_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-            android:textSize="10sp" />
-
-        <TextView
-            android:id="@+id/email_text"
-            android:text="email@server.com  website.com"
-            android:layout_below="@id/type_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-            android:textSize="10sp" />
-
-        <!--<TextView-->
-            <!--android:id="@+id/website_text"-->
-            <!--android:text="website.com"-->
-            <!--android:layout_below="@id/email_text"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:textColor="@android:color/black"-->
-            <!--android:textSize="10sp" />-->
-
-        <ImageView
-            android:id="@+id/latest_tweet"
-            android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:paddingTop="70dp"
-            android:src="@drawable/tweet_barbara_boxer"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="23dp" />
+            android:paddingLeft="110dp"
+            android:paddingTop="5dp"
+            android:background="?android:selectableItemBackground"  >
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/detail_button"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="9dp" />
+            <TextView
+                android:id="@+id/name_text"
+                android:text="Dummy Name"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/party_text"
+                android:fontFamily="sans-serif"
+                android:textStyle="italic"
+                android:text="Dummy Party"
+                android:layout_below="@id/name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/email_text"
+                android:fontFamily="sans-serif"
+                android:text="email@server.com"
+                android:layout_below="@id/party_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/website_text"
+                android:fontFamily="sans-serif"
+                android:text="website.com"
+                android:layout_below="@id/email_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="10sp" />
+
+            <!--<View-->
+            <!--android:id="@+id/tweet_holder"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"></View>-->
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/arrow"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="9dp" />
+
+        </RelativeLayout>
     </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/info_holder"
+        android:paddingTop="111dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></RelativeLayout>
+
 
 </android.support.v7.widget.CardView>

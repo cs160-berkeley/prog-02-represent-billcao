@@ -44,8 +44,8 @@
                 <ImageView
                     android:id="@+id/rep_image"
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:src="@drawable/barbara_boxer"/>
+                    android:paddingLeft="18dp"
+                    android:layout_height="120dp"></ImageView>
             </RelativeLayout>
 
 
@@ -59,6 +59,8 @@
                 <TextView
                     android:id="@+id/name"
                     android:text="Dummy Name"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
@@ -67,29 +69,33 @@
                 <TextView
                     android:id="@+id/party"
                     android:text="Dummy Party"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="italic"
                     android:layout_below="@id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:textSize="10sp" />
+                    android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/type"
-                    android:text="Dummy Type"
+                    android:text="Term ends on:"
+                    android:id="@+id/term_text"
                     android:layout_below="@id/party"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:textSize="10sp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/term_end_date"
-                    android:text="Term Ending on Month Day, Year"
-                    android:layout_below="@id/type"
+                    android:text="Month Day, Year"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold|italic"
+                    android:layout_below="@id/term_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:textSize="10sp" />
+                    android:textSize="14sp" />
             </RelativeLayout>
 
         </RelativeLayout>
@@ -97,28 +103,42 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:id="@+id/committee_container"
-            android:layout_below="@id/header">
+            android:layout_below="@id/header"
+            android:orientation="vertical">
             <TextView
                 android:id="@+id/committees"
-                android:text="ListView of Committees served on"
+                android:text="Committees served on"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textSize="16sp" />
+            <ListView
+                android:id="@+id/committees_list"
+                android:layout_below="@id/committees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ListView>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/committee_container">
+            android:layout_below="@id/committee_container"
+            android:orientation="vertical">
             <TextView
                 android:id="@+id/bills"
-                android:text="ListView of Bills"
+                android:text="Bills"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textSize="16sp" />
+            <ListView
+                android:id="@+id/bills_list"
+                android:layout_below="@id/bills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ListView>
         </RelativeLayout>
         </RelativeLayout>
 

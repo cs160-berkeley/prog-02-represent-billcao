@@ -4,6 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.MessageApi;
@@ -42,18 +43,20 @@ public class PhoneToWatchService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.e("PhoneToWatchService", "onStartCommand");
         final Bundle extras = intent.getExtras();
 
         new Thread(new Runnable() {
             @Override
             public void run() {
                 mApiClient.connect();
-                // TODO: sendMessage to watch containing Congressional Representatives data
-                // OR use DataItem? Might just be easier to send over data and have watch parse each time
-                // TODO: Data structure, how to populate? Declare where?
+
                 if (extras != null) {
-                    final String zipCode = extras.getString("ZIP_CODE");
-                    sendMessage("/ZIP", zipCode);
+                    String repData = extras.getString("REPDATA");
+                    Log.e("SEND REPDATA P->W", repData);
+                    sendMessage("REPDATA", repData);
+                } else {
+                    Log.e("NO EXTRAS", "INFO NOT SENT");
                 }
 
             }
@@ -76,6 +79,7 @@ public class PhoneToWatchService extends Service {
                 for (Node node : nodes.getNodes()) {
                     MessageApi.SendMessageResult result = Wearable.MessageApi.sendMessage(
                             mApiClient, node.getId(), path, text.getBytes()).await();
+                    Log.e("sendMessage", "MESSAGE SENT");
                 }
             }
         }).start();

@@ -12,49 +12,53 @@ import android.support.wearable.view.GridViewPager;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.billcao.page.Page;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+
+import io.fabric.sdk.android.Fabric;
+
 public class MainActivity extends Activity implements SensorEventListener {
+
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private static final String TWITTER_KEY = "nEQCw1X6v5i0TZu3vroq6VQUL";
+    private static final String TWITTER_SECRET = "WShtcZ4oWihxoNJsBYfQsZfKEnMHuPRp5rn5Mt31ZMTNT2pJEB ";
+
 
     private SensorManager mSensorManager;
     private Sensor mSensor;
     private static final int SHAKE_THRESHOLD = 800;
+    public ArrayList<Page> pages = new ArrayList<Page>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+        Fabric.with(this, new Twitter(authConfig));
         setContentView(R.layout.activity_main);
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
+        if (extras != null) {
+            String repDataString = extras.getString("REPDATA");
+            Gson gson = new Gson();
+            Type pageArrayType = new TypeToken<ArrayList<Page>>(){}.getType();
+            pages = gson.fromJson(repDataString, pageArrayType);
+
+        }
+
+
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        // Don't start until msg (zip code/current location) has been passed in
+
         final GridViewPager pager = (GridViewPager) findViewById(R.id.pager);
-        pager.setAdapter(new MainViewWatchAdapter(this, getFragmentManager(), false, false));
-//        else {
-//            pager.setAdapter(new MainViewWatchAdapter(this, getFragmentManager(), false, true));
-//        }
-
-//        if (extras != null) {
-//            String zipCode = extras.getString("ZIP_CODE");
-//            // TODO: API call to get Congressional Representatives and 2012 Vote data based on zipCode or currentLocation
-//            TextView zipCodeView = (TextView) findViewById(R.id.text);
-//            zipCodeView.setText(zipCode);
-//        }
-//
-//        Button testButton = (Button) findViewById(R.id.test_btn);
-//
-//        testButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.e("TESTBUTTON", "WORKING");
-//                Intent selectRepIntent = new Intent(getBaseContext(), WatchToPhoneService.class);
-//                startService(selectRepIntent);
-//            }
-//        });
-
-
-
+        pager.setAdapter(new MainViewWatchAdapter(this, getFragmentManager(), pages));
     }
 
     @Override
@@ -96,10 +100,10 @@ public class MainActivity extends Activity implements SensorEventListener {
                 Log.e("sensor", "shake detected w/ speed: " + speed);
                 Toast.makeText(this, "shake detected w/ speed: " + speed, Toast.LENGTH_SHORT).show();
                 Intent randomZipIntent = new Intent(getBaseContext(), WatchToPhoneService.class);
-                randomZipIntent.putExtra("RANDOM", "ZIP");
+                randomZipIntent.putExtra("RANDOM", "LOCATION");
                 startService(randomZipIntent);
                 final GridViewPager pager = (GridViewPager) findViewById(R.id.pager);
-                pager.setAdapter(new MainViewWatchAdapter(this, getFragmentManager(), true, false));
+                pager.setAdapter(new MainViewWatchAdapter(this, getFragmentManager(), pages));
             }
             last_x = x;
             last_y = y;

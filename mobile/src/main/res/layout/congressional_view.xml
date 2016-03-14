@@ -33,11 +33,6 @@ tools:context="com.billcao.ichoosewho.CongressionalViewActivity">
         android:paddingTop="@dimen/activity_vertical_margin"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <!--<TextView-->
-            <!--android:id="@+id/location"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:text="Using current location..."/>-->
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/my_recycler_view"

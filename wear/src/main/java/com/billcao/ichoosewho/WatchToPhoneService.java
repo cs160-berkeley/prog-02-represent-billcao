@@ -52,7 +52,6 @@ public class WatchToPhoneService extends Service {
             public void run() {
                 mWatchApiClient.connect();
 
-                // Message from watch MainActivity means either shake or selected rep
                 if (extras.get("RANDOM") != null) {
                     Log.e("WATCHTOPHONE", "SHAKE DETECTED");
                     sendMessage("/RANDOM", "");
@@ -61,11 +60,9 @@ public class WatchToPhoneService extends Service {
                     // OR use DataItem? Might just be easier to send over data and have watch parse each time
                     // TODO: Data structure, how to populate? Declare where?
                     Log.e("WATCHTOPHONESERVICE", "WORKING");
-                    String name = (String) extras.get("/REP_NAME");
-                    String party = (String) extras.get("/REP_PARTY");
-                    String type = (String) extras.get("/REP_TYPE");
-                    String data = name + "," + party + "," + type;
-                    sendMessage("/REP_NAME", data);
+                    String repJson = (String) extras.get("REPJSON");
+                    Log.e("WATCHTOPHONE", repJson);
+                    sendMessage("REPJSON", repJson);
                 }
 
             }
